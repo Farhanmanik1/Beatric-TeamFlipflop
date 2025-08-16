@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "SmartWorkoutApp",
-    "slug": "SmartWorkoutApp",
+    "name": "Beatric",
+    "slug": "beatric",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true
@@ -18,12 +18,24 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "195bee12-ce1e-4eb0-aca9-dcfd3d763c7d"
+      }
+    },
+    "owner": "frhnmnk",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/195bee12-ce1e-4eb0-aca9-dcfd3d763c7d"
     }
   }
 }
