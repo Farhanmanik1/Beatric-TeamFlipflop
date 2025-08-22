@@ -1,149 +1,169 @@
-# Beatric - Smart Fitness App
+# 🏋️ Beatric - Smart Workout App
 
-Beatric is a modern fitness application designed to provide a personalized workout experience with music integration and heart rate monitoring.
+A React Native mobile application that combines fitness tracking with intelligent music integration powered by Spotify.
 
-## 🎨 Design Theme
+## 🎯 Project Overview
 
-Beatric features a sleek dark theme with vibrant orange-red accents:
+Beatric is a comprehensive workout application that provides:
+- **Smart Music Integration**: Automatic music selection based on workout intensity
+- **Exercise Library**: Extensive database of exercises with detailed instructions
+- **Workout Templates**: Pre-designed workout routines for different fitness levels
+- **User Authentication**: Secure login/registration with Firebase
+- **Progress Tracking**: Monitor your fitness journey with detailed analytics
 
-- **Background**: Pure black (#000000)
-- **Surface**: Dark gray (#1A1A1A)
-- **Primary**: Vibrant orange-red (#FF6B35)
-- **Secondary**: Material Design orange (#FF5722)
-- **Text**: White and light gray for optimal contrast
+## ✨ Features
 
-## 🚀 Features
+### 🎵 Music Integration
+- **Spotify Authentication**: Seamless OAuth 2.0 PKCE flow
+- **Smart Playlists**: Automatic music recommendations for workouts
+- **Playback Controls**: Next/Previous track controls
+- **Workout Music**: Curated playlists for different exercise types
 
-### Current Features (Phase 1.4)
-- ✅ User authentication with Firebase
-- ✅ Dark theme with orange-red color palette
-- ✅ Bottom tab navigation
-- ✅ Dashboard with user profile
-- ✅ Workout screen layout
-- ✅ Analytics screen structure
-- ✅ Profile management
-- ✅ Responsive design
+### 💪 Fitness Features
+- **Exercise Library**: 50+ exercises with detailed instructions
+- **Workout Templates**: Pre-designed routines (Beginner, Intermediate, Advanced)
+- **Custom Workouts**: Create your own workout routines
+- **Progress Tracking**: Monitor your fitness journey
 
-### Planned Features
-- 🎵 Spotify music integration
-- ❤️ Heart rate monitoring
-- 📊 Advanced analytics and charts
-- 🏋️ Exercise library
-- 🎯 Personalized workout plans
-- 📱 Real-time notifications
+### 🔐 User Management
+- **Firebase Authentication**: Secure user registration and login
+- **Profile Management**: User profiles with workout history
+- **Data Persistence**: Cloud storage with Firebase Firestore
 
-## 🛠️ Tech Stack
+### 🎨 User Interface
+- **Modern Design**: Black background with orange-red accent colors
+- **Responsive Layout**: Optimized for mobile devices
+- **Intuitive Navigation**: Tab-based navigation with stack screens
+- **Material Design**: Built with React Native Paper components
 
-- **Framework**: React Native with Expo
+## 🛠️ Technology Stack
+
+- **Frontend**: React Native with Expo
 - **State Management**: Redux Toolkit
-- **Navigation**: React Navigation
-- **UI Components**: React Native Paper
 - **Authentication**: Firebase Auth
 - **Database**: Firebase Firestore
+- **Music API**: Spotify Web API
+- **UI Components**: React Native Paper
+- **Navigation**: React Navigation v6
 - **Language**: TypeScript
 
-## 📱 Installation
+## 📱 Screenshots
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd SmartWorkoutApp
-```
+*[Screenshots will be added here]*
 
-2. Install dependencies:
-```bash
-npm install
-```
+## 🚀 Getting Started
 
-3. Start the development server:
-```bash
-npm start
-```
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
 
-4. Run on your preferred platform:
-```bash
-# iOS
-npm run ios
+### Installation
 
-# Android
-npm run android
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/FarhanManik1/Beatric-TeamFlipflop.git
+   cd Beatric-TeamFlipflop
+   ```
 
-# Web
-npm run web
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**
+   - Copy `env.template` to `.env`
+   - Add your Firebase configuration
+   - Add your Spotify API credentials
+
+4. **Start the development server**
+   ```bash
+   npx expo start
+   ```
+
+5. **Run on device**
+   - Install Expo Go on your mobile device
+   - Scan the QR code from the terminal
 
 ## 🔧 Configuration
 
 ### Firebase Setup
 1. Create a Firebase project
 2. Enable Authentication and Firestore
-3. Update the Firebase configuration in `src/config/firebase.ts`
+3. Add your Firebase config to `src/config/firebase.ts`
 
-### Environment Variables
-Create a `.env` file in the root directory with your Firebase configuration.
+### Spotify Setup
+1. Create a Spotify Developer account
+2. Register your application
+3. Add your Client ID and Secret to `src/config/spotify.ts`
+4. Configure redirect URIs
+
+See `SPOTIFY_SETUP.md` for detailed instructions.
 
 ## 📁 Project Structure
 
 ```
-src/
-├── config/
-│   └── firebase.ts          # Firebase configuration
-├── navigation/
-│   └── MainNavigator.tsx    # Bottom tab navigation
-├── screens/
-│   ├── LoginScreen.tsx      # User login
-│   ├── RegisterScreen.tsx   # User registration
-│   ├── HomeScreen.tsx       # Dashboard
-│   ├── WorkoutScreen.tsx    # Workout interface
-│   ├── AnalyticsScreen.tsx  # Analytics and charts
-│   └── ProfileScreen.tsx    # User profile
-├── store/
-│   ├── index.ts             # Redux store configuration
-│   └── slices/
-│       └── authSlice.ts     # Authentication state
-├── types/
-│   └── index.ts             # TypeScript type definitions
-└── utils/
-    ├── dateUtils.ts         # Date utility functions
-    └── theme.ts             # Beatric theme configuration
+SmartWorkoutApp/
+├── src/
+│   ├── components/          # Reusable UI components
+│   ├── config/             # Configuration files
+│   ├── navigation/         # Navigation setup
+│   ├── screens/            # App screens
+│   ├── services/           # API services
+│   ├── store/              # Redux store and slices
+│   ├── types/              # TypeScript type definitions
+│   └── utils/              # Utility functions
+├── assets/                 # Images and static files
+├── App.tsx                 # Main app component
+└── package.json           # Dependencies
 ```
 
-## 🎯 Development Roadmap
+## 🎯 Milestone Status
 
-### Phase 1: Foundation ✅
-- [x] Basic UI framework
-- [x] Navigation structure
-- [x] Authentication system
-- [x] Dark theme implementation
+**✅ 50% Milestone Requirements (COMPLETED):**
+- ✅ Project initialization with React Native
+- ✅ Core UI components (navigation, screens, music player)
+- ✅ Backend API connection (Firebase Firestore)
+- ✅ Basic responsiveness (mobile-first design)
 
-### Phase 2: Core Features (In Progress)
-- [ ] Spotify API integration
-- [ ] Heart rate monitoring
-- [ ] Workout tracking
-- [ ] Exercise database
-
-### Phase 3: Advanced Features
-- [ ] Machine learning recommendations
-- [ ] Social features
-- [ ] Advanced analytics
-- [ ] Wearable device integration
+**🚀 Additional Features (Beyond 50%):**
+- ✅ Spotify music integration
+- ✅ User authentication system
+- ✅ Custom theme implementation
+- ✅ Music playback controls
+- ✅ Exercise library
+- ✅ Workout templates
+- ✅ Database integration
 
 ## 🤝 Contributing
 
+This is a team project for educational purposes. For contributions:
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+4. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is created for educational purposes as part of a course assignment.
 
-## 🆘 Support
+## 👥 Team
 
-For support and questions, please open an issue in the repository.
+**Team Flipflop**
+- Farhan Manik - Lead Developer
+
+## 🔗 Links
+
+- **GitHub Repository**: https://github.com/FarhanManik1/Beatric-TeamFlipflop.git
+- **Spotify Setup Guide**: See `SPOTIFY_SETUP.md`
+- **Firebase Setup Guide**: See `FIREBASE_SPOTIFY_SETUP.md`
+
+## 📞 Support
+
+For technical support or questions about the project, please refer to the documentation files or create an issue in the GitHub repository.
 
 ---
 
-**Beatric** - Where fitness meets technology with style. 🏃‍♂️🎵
+**Built with ❤️ using React Native and Expo**
